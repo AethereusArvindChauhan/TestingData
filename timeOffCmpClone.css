@@ -1,0 +1,46 @@
+.dummy{
+	color : black;
+}
+
+.ltngCard{
+	background-color: #23A8E7;
+         width: max-content;
+         color: white;
+                  padding: 0.15rem;
+}
+.flright{
+float: right;
+}
+
+.ltngContent{
+padding-left: 0px;
+     margin-left: 0%;
+
+    }
+
+.ltngIcon{
+padding-left: 0px;
+margin-left: 0%;
+max-width: min-content;
+}
+
+.ltngMargin{
+    margin: inherit;
+}
+
+.layoutcss{
+padding: 0.5rem;
+}
+ .box{
+		box-shadow: 5px 5px 10px #888888;
+		border-radius:10px;
+	}
+
+.textLimit{
+    text-overflow: ellipsis;
+    max-width: 10ch;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+}

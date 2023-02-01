@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-17-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+	<template if:false={addButtonVisible}>
+		<lightning-card title="Upcoming Holiday / Time Off Events" icon-name={tab1iconName}>
+			<lightning-button label="Add" title="Add" class="slds-m-left_x-small" slot="actions" onclick={handleClick}>
+			</lightning-button>
+			<c-tiles-component cancel-events={timeOffEvents}>
+                    		</c-tiles-component>
+			<template if:true={showMoreButtonVisible}>
+				<lightning-button class="slds-float_right" label={buttonLabel} onclick={handleshowMoreButtonClick}>
+				</lightning-button>
+			</template>
+		</lightning-card>
+	</template>
+
+	<!-- modal start -->
+	<template if:true={addButtonVisible}>
+		<div>
+			<lightning-card>
+				<div style="text-align: center; font-weight:bold;">
+					<div class="slds-text-heading_medium">
+						Block Time Off
+					</div>
+				</div>
+				<c-mark-slots-as-unavailable-for-service-resource ongetclosepopvalue={handleSearchValue}>
+				</c-mark-slots-as-unavailable-for-service-resource>
+				<div style="text-align: center">
+					<!--<footer class="slds-modal__footer"> <div style="text-align: center">-->
+					<button class="slds-button slds-button_neutral" onclick={hideModalBoxNewAppointmt}>Cancel</button>
+					<button class="slds-button slds-button_brand" onclick={showModalBoxConfirmAppointmt}>Block</button>
+
+				</div>
+			</lightning-card>
+		</div>
+	</template>
+	<!-- modal end -->
+</template>
